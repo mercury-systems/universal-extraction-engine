@@ -1,0 +1,4 @@
+lxml
+pydantic
+aiosqlite
+httpx
