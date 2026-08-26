@@ -1,0 +1,10 @@
+services:
+  extractor:
+    build: .
+    volumes:
+      - ./urls.txt:/app/urls.txt:ro
+      - ./output:/app/output
+    environment:
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
