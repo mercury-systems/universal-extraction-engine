@@ -12,19 +12,24 @@ Extract structured data from HTML: metadata, JSON-LD, tables, links, images, and
 - **Batch mode**: Process multiple URLs concurrently
 - **Export**: JSON or CSV output
 
-## Install
+## Installation
 
-    git clone https://github.com/mercury-systems/universal-extraction-engine.git
-    cd universal-extraction-engine
+```bash
+git clone https://github.com/mercury-systems/universal-extraction-engine.git
+cd universal-extraction-engine
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pip install -e .
+```
 
-    python3 -m venv venv
-    source venv/bin/activate
+For running tests:
 
-    pip install -r requirements.txt
-    pip install -e .
+```bash
+pip install -r requirements-dev.txt
+```
 
-    # For tests
-    pip install -r requirements-dev.txt
+> **Note:** Always activate the virtual environment (`source .venv/bin/activate`) before working with this project.
 
 ## Quick Start
 
