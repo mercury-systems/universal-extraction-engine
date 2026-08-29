@@ -14,6 +14,13 @@ Extract structured data from HTML: metadata, JSON-LD, tables, links, images, and
 
 ## Installation
 
+For Ubuntu/Debian, ensure you have the required system dependencies for XML parsing:
+
+```bash
+sudo apt-get update
+sudo apt-get install -y python3-venv libxml2-dev libxslt1-dev zlib1g-dev
+```
+
 ```bash
 git clone https://github.com/mercury-systems/universal-extraction-engine.git
 cd universal-extraction-engine
