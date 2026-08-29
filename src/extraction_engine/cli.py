@@ -138,17 +138,18 @@ Examples:
         """
     )
     parser.add_argument("--verbose", "-v", action="store_true")
-    parser.add_argument("--selector", help="CSS selector for targeted extraction")
 
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     single = subparsers.add_parser("single", help="Extract from a single URL")
     single.add_argument("url", help="Target URL")
+    single.add_argument("--selector", help="CSS selector for targeted extraction")
     single.add_argument("--output", "-o", help="Save result to JSON file")
 
     batch = subparsers.add_parser("batch", help="Extract from multiple URLs")
     batch.add_argument("--urls", nargs="+", help="Space-separated URLs")
     batch.add_argument("--url-file", help="File with one URL per line")
+    batch.add_argument("--selector", help="CSS selector for targeted extraction")
     batch.add_argument("--concurrency", type=int, default=5)
     batch.add_argument("--output", "-o", help="Save results to JSON file")
     batch.add_argument("--csv", help="Also export to CSV file")
